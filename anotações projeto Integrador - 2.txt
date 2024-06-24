@@ -1,0 +1,41 @@
+
+******************
+
+** controller
+
+UsuarioController  --- login também, igual no b2system
+VeiculoController
+CartaoController
+
+******************
+
+** model
+
+Usuario
+Veiculo
+Cartao
+
+******************
+
+** reoisitory
+
+UsuarioRepository
+VeiculoRepository
+CartaoRepository
+
+no outro projeto tem também CadastroRepository
+
+
+
+yPXfKOLB1v0UCmYt
+
+Banco de dados
+username= postgres.mdowaxefiupycacweako
+senha = yPXfKOLB1v0UCmYt
+
+
+
+antigo
+
+username= postgres.mdowaxefiupycacweako
+senha = yPXfKOLB1v0UCmYt
