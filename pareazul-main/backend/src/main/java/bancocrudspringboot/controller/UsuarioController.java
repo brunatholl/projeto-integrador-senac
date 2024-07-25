@@ -83,4 +83,20 @@ public class UsuarioController {
 		
 		return ResponseEntity.ok(this.usuarioRepository.save(cadastro));
 	}
+
+	// Altera Perfil    
+	@PutMapping("/usuario/{id}")
+	@ResponseStatus(HttpStatus.OK)
+	public ResponseEntity<Usuario> updateCadastro(@PathVariable(value = "id") Long cadastroId,
+												  @Validated @RequestBody 
+				 Usuario cadastroCaracteristicas) throws ResourceNotFoundException {
+					Usuario cadastro = usuarioRepository.findById(cadastroId)
+					.orElseThrow(() -> new ResourceNotFoundException("Cadastro não encontrado para o ID : " + cadastroId));
+
+		cadastro.setNome(cadastroCaracteristicas.getNome());
+		cadastro.setCpf(cadastroCaracteristicas.getCpf());
+		cadastro.setEmail(cadastroCaracteristicas.getEmail());
+
+		return ResponseEntity.ok(this.usuarioRepository.save(cadastro));
+	}
 }
