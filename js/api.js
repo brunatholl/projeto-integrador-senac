@@ -1,6 +1,7 @@
 function getUrlBase() {
   if (isServidorOnline()) {
-    return "https://pareazul.fly.dev/api/";
+    // return "https://pareazul.fly.dev/api/";
+    return "https://apipareazul.fly.dev/api/";
   }
 
   return "http://localhost:8080/api/";
